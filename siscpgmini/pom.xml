@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.unicauca.proyecto2</groupId>
+	<artifactId>siscpgmini</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<!-- Información sobre la aplicación -->
+	<name>Sistema Integrado para el Seguimiento y Control de los Proyectos de Grado (SISCPG)</name>
+	<url>https://github.com/lfjimenez/proyecto2_2015_01</url>
+	<description>Sistema de información basado en workflow para el seguimiento, por parte de los estudiantes, y control, por parte de los administrativos de la facultad, de los proyectos de grado de la facultad de Ingeniería Electrónica y Telecomunicaciónes (FIET) de la Universidad del Cauca.</description>
+	<inceptionYear>2015</inceptionYear>
+
+	<!-- Información sobre el equipo de desarrollo -->
+	<developers>
+		<developer>
+			<id>cfernandez</id>
+			<name>Cristhiam Fernández</name>
+			<email>cristhiam@unicauca.edu.co</email>
+			<roles>
+				<role>arquitecto</role>
+				<role>desarrollador</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>gabrielrengifo</id>
+			<name>Gabriel Rengifo</name>
+			<email>gabrielrengifo@unicauca.edu.co</email>
+			<roles>
+				<role>analista</role>
+				<role>diseñador</role>
+				<role>desarrollador</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>isisvictoria</id>
+			<name>Isis Victoria</name>
+			<email>isisvictoria@unicauca.edu.co</email>
+			<roles>
+				<role>analista</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>jhreyes</id>
+			<name>Jhon Reyes</name>
+			<email>jhreyes@unicauca.edu.co</email>
+			<roles>
+				<role>desarrollador</role>
+				<role>pruebas</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>jorgevelasco</id>
+			<name>Jorge Velásco</name>
+			<email>jorgevelasco@unicauca.edu.co</email>
+			<roles>
+				<role>arquitecto</role>
+				<role>desarrollador</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>lfjimenez</id>
+			<name>Luis Jimenez</name>
+			<email>lfjimenez@unicauca.edu.co</email>
+			<roles>
+				<role>jefe de proyecto</role>
+				<role>desarrollador</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.camunda.bpm</groupId>
+				<artifactId>camunda-bom</artifactId>
+				<version>7.2.0</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.camunda.bpm</groupId>
+			<artifactId>camunda-engine</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.camunda.bpm</groupId>
+			<artifactId>camunda-engine-cdi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.camunda.bpm.javaee</groupId>
+			<artifactId>camunda-ejb-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec</groupId>
+			<artifactId>jboss-javaee-web-6.0</artifactId>
+			<version>3.0.2.Final</version>
+			<type>pom</type>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>xalan</artifactId>
+					<groupId>xalan</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<properties>
+    		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	</properties>
+	
+</project>

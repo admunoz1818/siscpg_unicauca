@@ -1,0 +1,117 @@
+<h2>Nueva propuesta de proyecto de grado</h2>
+<form role="form" name="variablesForm">
+
+	<div class="panel panel-info">Por favor, diligencie el siguiente
+		formulario para presentar una propuesta de proyecto de grado ante el
+		departamento. Los campos marcados con asterisco (*) son obligatorios.
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6">
+
+			<div class="form-group">
+				<label class="control-label" for="titulo">Título (*)</label>
+				<div class="controls">
+					<input cam-variable-name="titulo" cam-variable-type="String"
+						id="titulo" class="form-control" type="text" required />
+					<div class="help">(Propuesta de título del proyecto de grado)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="numEstudiantes">Número
+					de estudiantes (*)</label>
+				<div class="controls">
+					<input cam-variable-name="numEstudiantes"
+						cam-variable-type="Integer" id="numEstudiantes"
+						class="form-control" type="number" required />
+					<div class="help">(Cuantos estudiantes se necesitan para
+						ejecutar el proyecto?)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="objetivos">Objetivos (*)</label>
+				<div class="controls">
+					<textarea cam-variable-name="objetivos" cam-variable-type="String"
+						id="objetivos" class="form-control" required></textarea>
+					<div class="help">(Escriba cada objetivo en una nueva línea.)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="aportes">Aportes o
+					contribuciones a las líneas de investigación y desarrollo o temas
+					de interes del departamento (*)</label>
+				<div class="controls">
+					<textarea cam-variable-name="aportes" cam-variable-type="String"
+						id="aportes" class="form-control" required></textarea>
+					<div class="help">(Escriba cada aporte en una nueva línea.)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="tiempoEstimado">Tiempo
+					estimado de realización (*)</label>
+				<div class="controls">
+					<input cam-variable-name="tiempoEstimado"
+						cam-variable-type="Integer" id="tiempoEstimado"
+						class="form-control" type="number" required /> meses
+					<div class="help">(Tiempo estimado, en meses, que durará el
+						proyecto.)</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-xs-6">
+
+			<div class="form-group">
+				<label class="control-label" for="condicionesEntrega">Condiciones
+					de entrega (*)</label>
+				<div class="controls">
+					<textarea cam-variable-name="condicionesEntrega"
+						cam-variable-type="String" id="condicionesEntrega"
+						class="form-control" required></textarea>
+					<div class="help">(Escriba cada condicion en una nueva
+						línea.)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="recursosRequeridos">Recursos
+					requeridos (*)</label>
+				<div class="controls">
+					<textarea cam-variable-name="recursosRequeridos"
+						cam-variable-type="String" id="recursosRequeridos"
+						class="form-control" required></textarea>
+					<div class="help">(Escriba cada recurso en una nueva línea.)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="fuentesFinanciacion">Definición
+					de fuentes de financiación</label>
+				<div class="controls">
+					<textarea cam-variable-name="fuentesFinanciacion"
+						cam-variable-type="String" id="fuentesFinanciacion"
+						class="form-control"></textarea>
+					<div class="help">(Si su proyecto precisa de financiación,
+						escriba cada una en una nueva línea.)</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="observaciones">Observaciones</label>
+				<div class="controls">
+					<textarea cam-variable-name="observaciones"
+						cam-variable-type="String" id="observaciones" class="form-control"></textarea>
+					<div class="help">(Si desea agregar una observación sobre el
+						proyecto, escriba cada una de ellas en una nueva línea.)</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</form>
+

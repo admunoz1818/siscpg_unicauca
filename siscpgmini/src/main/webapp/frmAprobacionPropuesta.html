@@ -1,0 +1,145 @@
+<form class="form-horizontal" role="form">
+	<script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('titulo');
+      camForm.variableManager.fetchVariable('numEstudiantes');
+      camForm.variableManager.fetchVariable('objetivos');
+      camForm.variableManager.fetchVariable('aportes');
+      camForm.variableManager.fetchVariable('tiempoEstimado');
+      camForm.variableManager.fetchVariable('condicionesEntrega');
+      camForm.variableManager.fetchVariable('recursosRequeridos');
+      camForm.variableManager.fetchVariable('fuentesFinanciacion');
+	  camForm.variableManager.fetchVariable('observaciones');
+    });
+    camForm.on('variables-restored', function() {
+      $scope.titulo = camForm.variableManager.variableValue('titulo');
+      $scope.numEstudiantes = camForm.variableManager.variableValue('numEstudiantes');
+      $scope.objetivos = camForm.variableManager.variableValue('objetivos');
+      $scope.aportes = camForm.variableManager.variableValue('aportes');
+      $scope.tiempoEstimado = camForm.variableManager.variableValue('tiempoEstimado');
+      $scope.condicionesEntrega = camForm.variableManager.variableValue('condicionesEntrega');
+      $scope.recursosRequeridos = camForm.variableManager.variableValue('recursosRequeridos');
+      $scope.fuentesFinanciacion = camForm.variableManager.variableValue('fuentesFinanciacion');
+	  $scope.observaciones = camForm.variableManager.variableValue('observaciones');
+    });
+  </script>
+  
+	<div class="panel panel-info">Al aprobar una propuesta de
+		proyecto de grado, habilitará a los estudiantes o al director a subir
+		el documento de anteproyecto. Por el contrario, si no se aprueba la
+		propuesta, el proyecto será cancelado.</div>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Título</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{titulo}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+	
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Objetivos</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{objetivos}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Número de estudiantes</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{numEstudiantes}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Aportes o contribución a las
+				líneas de investigación y desarrollo o temas de interés del
+				departamento</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{aportes}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Tiempo estimado de realización</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{tiempoEstimado}} meses</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Condiciones de entrega</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{condicionesEntrega}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Recursos requeridos</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{recursosRequeridos}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Definición de fuentes de
+				financiación</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{fuentesFinanciacion}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<label class="control-label">Observaciones</label>
+		</div>
+		<div class="col-xs-7">
+			<div class="controls">{{observaciones}}</div>
+		</div>
+	</div>
+	
+	<hr/>
+
+	<div class="control-group">
+		<label class="control-label">Aprobar la propuesta</label>
+		<div class="controls">
+			<select cam-variable-name="aprobada" cam-variable-type="Boolean">
+				<option value="true">Aprobar</option>
+				<option value="false">No aprobar</option>
+			</select>
+		</div>
+		<p ng-if="variablesForm.aprobada.$invalid" style="color: red">Por
+			favor, especifique si aprueba o no la propuesta de proyecto de grado.</p>
+	</div>
+</form>
