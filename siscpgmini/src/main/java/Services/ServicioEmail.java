@@ -35,7 +35,7 @@ public class ServicioEmail implements TaskListener{
     private String mensaje;
     private String asunto;
     
-    private final String formatoCuerpo = "<div style='background-color:#18457C; width:459px;'><img src='http://imageshack.com/a/img537/148/ODwI2A.png'>"
+    private final String formatoCuerpo = "<div style='background-color:#18457C; width:459px;'><img src='http://res.cloudinary.com/admunoz/image/upload/v1431970345/ODwI2AM_wvdb7r.png'>"
        + "<div style='color:black; font-size:16px;padding:15px'><br><h4 style='color:white;'>Cordial Saludo,</h4><br>"
        + "<p style='color:white; font-family: sans-serif; font-size: 14px;'> %s </p><br>"
        + "</div> <div style='color:white;font-size:11px; padding:15px'> <i>Por favor no responda a este correo electrónico.</i>" 
